@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  distDir: "dist",
+  distDir: "out",
   images: {
     unoptimized: true, // GitHub Pages doesn't support dynamic image optimization
   },
