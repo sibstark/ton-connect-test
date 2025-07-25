@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // GitHub Pages doesn't support dynamic image optimization
   },
-  /* config options here */
+  basePath: "/ton-connect-test"
 };
 
 export default nextConfig;
