@@ -1,3 +1,4 @@
+"use client";
 import { useTonWallet } from '@tonconnect/ui-react';
 
 export const Wallet = () => {
