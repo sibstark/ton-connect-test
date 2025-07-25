@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { PayButton } from "./button";
+import { Wallet } from "./wallet";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       </h1>
 
       <PayButton />
-
+      <Wallet />
       <footer className="absolute bottom-6 text-sm text-gray-500 dark:text-gray-400">
         © {new Date().getFullYear()} – TON App
       </footer>

@@ -1,5 +1,5 @@
 {
-  "url": "http://localhost:3000",
-  "name": "My Local TON App",
+  "url": "https://sibstark.github.io/ton-connect-test/",
+  "name": "My Oleg TON App",
   "iconUrl": "https://ton-connect.github.io/demo-dapp/apple-touch-icon.png"
 }
