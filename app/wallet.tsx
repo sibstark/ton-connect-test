@@ -1,6 +1,7 @@
 "use client";
 import { useTonWallet, useTonConnectUI } from '@tonconnect/ui-react';
 
+
 export const Wallet = () => {
     const wallet = useTonWallet();
     const [connector] = useTonConnectUI();
@@ -15,6 +16,7 @@ export const Wallet = () => {
         console.log("result:", result); // base64
         alert(result);
     };
+
     return (
         wallet && (
             <div className="flex flex-col gap-4">
