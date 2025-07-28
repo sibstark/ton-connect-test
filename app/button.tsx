@@ -27,6 +27,6 @@ export function PayButton() {
         });
 
         return () => unsubscribe();
-    }, [connector]);
+    }, [connector, wallet]);
     return <TonConnectButton className="scale-110" />;
 }
