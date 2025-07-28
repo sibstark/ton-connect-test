@@ -8,7 +8,6 @@ const proof = {
 };
 
 export function PayButton() {
-    const wallet = useTonWallet();
     const [connector] = useTonConnectUI();
     useEffect(() => {
         connector.setConnectRequestParameters({
@@ -19,14 +18,15 @@ export function PayButton() {
 
     useEffect(() => {
         const unsubscribe = connector.onStatusChange(walletInfo => {
+            
             if (walletInfo?.connectItems?.tonProof) {
                 const proof = walletInfo.connectItems.tonProof;
                 console.log('TON Proof:', proof);
-                console.log('TON account wallet:', wallet?.account);
+                console.log('TON account wallet:', walletInfo?.account);
             }
         });
 
         return () => unsubscribe();
-    }, [connector, wallet]);
+    }, [connector]);
     return <TonConnectButton className="scale-110" />;
 }
