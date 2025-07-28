@@ -1,5 +1,5 @@
 "use client";
-import { TonConnectButton, useTonConnectUI } from "@tonconnect/ui-react";
+import { TonConnectButton, useTonConnectUI, useTonWallet } from "@tonconnect/ui-react";
 import { useEffect } from "react";
 
 const proof = {
@@ -8,7 +8,7 @@ const proof = {
 };
 
 export function PayButton() {
-
+    const wallet = useTonWallet();
     const [connector] = useTonConnectUI();
     useEffect(() => {
         connector.setConnectRequestParameters({
@@ -22,6 +22,7 @@ export function PayButton() {
             if (walletInfo?.connectItems?.tonProof) {
                 const proof = walletInfo.connectItems.tonProof;
                 console.log('TON Proof:', proof);
+                console.log('TON account wallet:', wallet?.account);
             }
         });
 
