@@ -1,10 +1,10 @@
 "use client";
-import { TonConnectButton, useTonConnectUI, useTonWallet } from "@tonconnect/ui-react";
+import { TonConnectButton, useTonConnectUI } from "@tonconnect/ui-react";
 import { useEffect } from "react";
 
 const proof = {
-    token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyYW5kb21fYnl0ZXMiOiJkOTQ2Yzc3NWNhYzI1Nzk2NGJiOTljMDQzZTczNGNhMzI4N2QwM2M1M2M3MDQ4ZmJmNWI1NmFkOTc4YjFhNDFiIiwiZXhwIjoxNzUzNzIyMDQxfQ.3RuwnHGJlUd3lGbF3FlrMnJOtjF_IKaa8YRH4hnjzCo",
-    token_hash: "29e94132ae61b5686e3b8b3584ac4cd1d85825ecdec66f1eb2c0b39e4093bd18"
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyYW5kb21fYnl0ZXMiOiI5YzQyNGRlYjg0MGI3YjdmM2UwZWYzZTc3YWYyNWExMTM1MWQ2MTBhNmExMTUyMGZlZTJkY2RjYzEyZTY3MTM1IiwiZXhwIjoxNzUzNzc2NTg4fQ.mdTnUtQqQF3zOmMkMUKxdIivv1q14biVifrYugnsChk",
+    "token_hash": "78c8183ff8b2ada64672c3f7b340aae072514eb9f5782c76308b15d44759e5a2"
 };
 
 export function PayButton() {
@@ -18,7 +18,7 @@ export function PayButton() {
 
     useEffect(() => {
         const unsubscribe = connector.onStatusChange(walletInfo => {
-            
+
             if (walletInfo?.connectItems?.tonProof) {
                 const proof = walletInfo.connectItems.tonProof;
                 console.log('TON Proof:', proof);
